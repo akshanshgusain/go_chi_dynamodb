@@ -1,12 +1,15 @@
 package product
 
 import (
+	"errors"
+	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/controllers/product"
 	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/handlers"
 	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/repository/adapter"
 	Rules "github.com/akshanshgusain/Go-Chi-DynamoDB/internal/rules"
 	RulesProduct "github.com/akshanshgusain/Go-Chi-DynamoDB/internal/rules/product"
 	HttpStatus "github.com/akshanshgusain/Go-Chi-DynamoDB/utils/http"
 	"github.com/go-chi/chi/v5"
+	"github.com/google/uuid"
 	"net/http"
 	"time"
 )
