@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"github.com/go-chi/cors"
 	"net/http"
 	"time"
 )
@@ -13,8 +14,15 @@ func NewConfig() *Config {
 	return &Config{}
 }
 
-func (c *Config) Cors(next *http.Handler) {
-
+func (c *Config) Cors(next http.Handler) http.Handler {
+	return cors.New(cors.Options{
+		AllowedOrigins:   []string{"*"},
+		AllowedMethods:   []string{"*"},
+		AllowedHeaders:   []string{"*"},
+		ExposedHeaders:   []string{"*"},
+		AllowCredentials: true,
+		MaxAge:           5,
+	}).Handler(next)
 }
 
 func (c *Config) SetTimeout(timeoutSeconds int) *Config {
