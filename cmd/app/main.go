@@ -6,6 +6,8 @@ import (
 	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/repository/adapter"
 	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/repository/instance"
 	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/routes"
+	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/rules"
+	RulesProduct "github.com/akshanshgusain/Go-Chi-DynamoDB/internal/rules/product"
 	"github.com/akshanshgusain/Go-Chi-DynamoDB/utils/logger"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"log"
