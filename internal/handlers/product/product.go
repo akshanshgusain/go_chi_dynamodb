@@ -3,6 +3,7 @@ package product
 import (
 	"errors"
 	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/controllers/product"
+	EntityProduct "github.com/akshanshgusain/Go-Chi-DynamoDB/internal/entities/product"
 	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/handlers"
 	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/repository/adapter"
 	Rules "github.com/akshanshgusain/Go-Chi-DynamoDB/internal/rules"

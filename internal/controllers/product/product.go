@@ -1,6 +1,7 @@
 package product
 
 import (
+	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/entities/product"
 	"github.com/akshanshgusain/Go-Chi-DynamoDB/internal/repository/adapter"
 	"github.com/aws/aws-sdk-go/service/dynamodb/expression"
 	"github.com/google/uuid"
@@ -11,7 +12,7 @@ type Controller struct {
 	repository adapter.Interface
 }
 
-type Interface interface {
+type IProductController interface {
 	ListOne(ID uuid.UUID) (entity product.Product, err error)
 	ListAll() (entities []product.Product, err error)
 	Create(entity *product.Product) (uuid.UUID, error)
@@ -19,7 +20,7 @@ type Interface interface {
 	Remove(ID uuid.UUID) error
 }
 
-func NewController(repository adapter.Interface) Interface {
+func NewController(repository adapter.Interface) IProductController {
 	return &Controller{repository: repository}
 }
 
