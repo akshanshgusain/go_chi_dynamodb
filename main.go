@@ -4,6 +4,10 @@ func main() {
 
 }
 
-func migrate()
+func migrate() {
 
-func checksTable()
+}
+
+func checksTable() {
+
+}
